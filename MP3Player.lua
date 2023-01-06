@@ -715,7 +715,7 @@ function imgui.OnDrawFrame()
                         end
                     end
                     imgui.SameLine()
-                    if imgui.Button(fa.ICON_FA_EDIT,imgui.ImVec2(49, 25)) then 
+                    if imgui.Button(fa.ICON_FA_EDIT..'        '..i,imgui.ImVec2(49, 25)) then 
                         menu_selected = 6 
                         Playlist = file 
                         local f = io.open("moonloader/resource/MP3Player/Playlists/" .. file, 'r')
@@ -727,7 +727,7 @@ function imgui.OnDrawFrame()
                     end
                     Hovered('Редактировать')
                     imgui.SameLine()
-                    if imgui.Button(fa.ICON_FA_PLAY,imgui.ImVec2(49, 25)) then 
+                    if imgui.Button(fa.ICON_FA_PLAY..'            '..i,imgui.ImVec2(49, 25)) then 
                         local f = io.open("moonloader/resource/MP3Player/Playlists/" .. file, 'r')
                         if f then
                             ConfigPlaylist = decodeJson(f:read('*a'))
